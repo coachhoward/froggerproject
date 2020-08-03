@@ -1,16 +1,24 @@
+//this file is a rebuild of project 1 file. I could not figure out how to link properly 
+//with 3 diff html pages. Ask in chat if I cant debug. Put both files in github
 
+//target all divs in game graph
 const squares = document.querySelectorAll('.grid div');
+//time left in game
 const timeLeft = document.querySelector('#time');
+//results of game
 const result = document.querySelector('#result');
+//start after refresh
 const startButton = document.querySelector('#button');
+//text to show results of game
 const h1Text = document.querySelector('.h1text')
-
+//cars moving left to tartet in loop
 const carsLeft = document.querySelectorAll('.car-left');
+//cars moving right to target in loop
 const carsRight = document.querySelectorAll('.car-right');
+//log left target
 const logsLeft = document.querySelectorAll('.log-left');
+//log right target
 const logsRight = document.querySelectorAll('.log-right');
-
-
 
 //make a 9x9 grid for the gameboard
 const width = 9;
@@ -20,9 +28,9 @@ let currentIndex = 76;
 let currentTime = 20;
 //timer Id w/value
 let timerId = 0;
-
+//add frog to bottom middle on ind 76 bottom
  squares[currentIndex].classList.add('frog')
-
+//use arrow keys on keyboard to move frog 37=L,38=up,39=R,40=down
  function movefrog (event){
      squares[currentIndex].classList.remove('frog')
      switch(event.keyCode){
@@ -40,16 +48,18 @@ let timerId = 0;
             break
           }
           squares[currentIndex].classList.add('frog');
+
+    //call lose/win, still need to define
           lose();
           win();
  }
 
-
+//use foreach to create an illusion that cars and logs are moving. Also add timer to control speed 
 function autoMoveCars() {
     carsLeft.forEach(carLeft => moveCarLeft(carLeft));
     carsRight.forEach(carRight => moveCarRight(carRight));
 }
-
+//switch 
 function moveCarLeft(carLeft) {
     switch (true) {
         case carLeft.classList.contains('c1'):
@@ -66,7 +76,7 @@ function moveCarLeft(carLeft) {
             break
     }
 }
-
+//switch
 function moveCarRight(carRight) {
     switch (true) {
         case carRight.classList.contains('c1'):
@@ -83,12 +93,12 @@ function moveCarRight(carRight) {
             break
     }
 }
-
+//foreach to create move log illusion
 function autoMoveLogs() {
     logsLeft.forEach(logLeft => moveLogLeft(logLeft))
     logsRight.forEach(logRight => moveLogRight(logRight))
 }
-
+//5 wide, 3 log ,2 water
 function moveLogLeft(logLeft) {
     switch (true) {
         case logLeft.classList.contains('l1'):
@@ -113,7 +123,7 @@ function moveLogLeft(logLeft) {
             break
     }
 }
-
+//switch
 function moveLogRight(logRight) {
     switch (true) {
         case logRight.classList.contains('l1'):
@@ -157,7 +167,7 @@ clearInterval(timerId)
 document.removeEventListener('keyup', movefrog)
 }
 }
-
+//move frog on log
 function moveWithLogLeft() {
     if (currentIndex >= 27 && currentIndex < 35){
        squares[currentIndex].classList.add('frog')
@@ -165,6 +175,7 @@ function moveWithLogLeft() {
        squares[currentIndex].classList.add('frog') 
     }
 }
+//move frog on log
 function moveWithLogRight() {
     if (currentIndex > 18 && currentIndex <= 26){
        squares[currentIndex].classList.add('frog')
@@ -172,7 +183,7 @@ function moveWithLogRight() {
        squares[currentIndex].classList.add('frog') 
     }
 }
-
+//func move pices on game grid invoke
 function movePiece () {
     currentTime--
     timeLeft.textContent = currentTime
