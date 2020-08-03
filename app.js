@@ -11,17 +11,20 @@ const logsRight = document.querySelectorAll('.log-right');
 
 
 
-
+//make a 9x9 grid for the gameboard
 const width = 9;
+//set starting point at index 76, which is bottom middle
 let currentIndex = 76;
-let currentTime = 20
-let timerId 
+//timer at 20 seconds
+let currentTime = 20;
+//timer Id w/value
+let timerId = 0;
 
  squares[currentIndex].classList.add('frog')
 
- function movefrog (e){
+ function movefrog (event){
      squares[currentIndex].classList.remove('frog')
-     switch(e.keyCode){
+     switch(event.keyCode){
         case 37:
              if(currentIndex % width !== 0) currentIndex -= 1;
             break
@@ -81,8 +84,8 @@ function moveCarRight(carRight) {
 }
 
 function autoMoveLogs() {
-    logsLeft.forEach(logLeft => autoMoveLogLeft(logLeft))
-    logsRight.forEach(logRight => autoMoveLogRight(logRight))
+    logsLeft.forEach(logLeft => moveLogLeft(logLeft))
+    logsRight.forEach(logRight => moveLogRight(logRight))
 }
 
 function moveLogLeft(logLeft) {
@@ -134,7 +137,7 @@ function moveLogRight(logRight) {
             break
     }
 }
-
+//reference index number 4, which is the 5th div.
 function win() {
     if(squares[4].classList.contains('frog')) {
         result.innerHTML = 'You win'
@@ -144,8 +147,9 @@ function win() {
     }
 }
 
+//note: (c1) is the truck img & (l5), (l4) is the river img
 function lose() {
-    if((currrentTime === 0) || (squares[currentIndex].classList.contains('c1')) || (squares[currentIndex].classList.contains('l5')) || (squares[currentIndex].classList.contains(l4))) {
+    if((currentTime === 0) || (squares[currentIndex].classList.contains('c1')) || (squares[currentIndex].classList.contains('l5')) || (squares[currentIndex].classList.contains('l4'))) {
         result.innerHTML = 'You Looose'
     squares[currentIndex].classList.remove('frog')
 clearInterval(timerId)
