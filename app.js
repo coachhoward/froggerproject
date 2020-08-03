@@ -16,7 +16,7 @@ const width = 9;
 //set starting point at index 76, which is bottom middle
 let currentIndex = 76;
 //timer at 20 seconds
-let currentTime = 5;
+let currentTime = 8;
 //timer Id w/value
 let timerId = 0;
 
