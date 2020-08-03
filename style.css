@@ -2,34 +2,58 @@
     border: 1px solid;
     display: flex;
     flex-wrap: wrap;
-    height: 180px;
-    width: 180px;
+    height: 720px;
+    width: 720px;
 }
 
 .grid div {
     
-    height: 20px;
-    width: 20px;
+    height: 80px;
+    width: 80px;
 
 }
 .end {
 background-color: red;
+background-image: url('https://www.netclipart.com/pp/m/6-67467_trophy-podium-royalty-free-clip-art-winner-podium.png');
+background-repeat: no-repeat;
+background-size: 80px 80px;
 }
 .start {
     background-color: blue;
+    background-image: url('https://www.seekpng.com/png/detail/78-780997_pond-transparent-lily-pad-clipart-frog-pond-clip.png');
+    background-repeat: no-repeat;
+  background-size: 80px 80px;
 }
-.frog {
-    background-color: green;
-}
+
 .c1 {
     background-color: black;
+    background-image: url('https://previews.123rf.com/images/mechanik/mechanik1612/mechanik161200001/68719846-cartoon-monster-truck-available-eps-10-separated-by-groups-and-layers-with-transparency-effects-for-.jpg');
+    background-repeat: no-repeat;
+  background-size: 80px 80px;
 }
+
 .c2, .c3 {
     background-color: grey;
+    background-image: url('https://lh3.googleusercontent.com/proxy/NsgZGZE7auf7usd6fh4WeVhES5M0OU6TBZaaTU3BfryddvYneYa6P_yShGjrAWatqc0AKSGTY-Gb9Ud3ZHW47ggk');
+    background-repeat: no-repeat;
+  background-size: 80px 80px;
 }
 .l1, .l2, .l3 {
     background-color: brown;
+    background-image: url('https://banner2.cleanpng.com/20180827/xsi/kisspng-forest-log-tree-firewood-firewood-forest-log-trapped-png-image-picpng-5b8434d2c438c0.4754663615353909308037.jpg');
+    background-repeat: no-repeat;
+  background-size: 80px 80px;
+ 
 }
 .l4, .l5 {
     background-color: lightblue;
+    background-image: url('https://pp.netclipart.com/pp/s/6-64863_river-clipart-transparent-background-cartoon-water-wave-png.png');
+background-repeat: no-repeat;
+background-size: 80px 80px;
+}
+.frog {
+    /* background-color: green; */
+    background-image: url('https://www.pikpng.com/pngl/m/6-68410_cute-cartoon-frog-baby-frog-clip-art-png.png');
+    background-repeat: no-repeat;
+  background-size: 80px 80px;
 }
