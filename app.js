@@ -16,7 +16,7 @@ const width = 9;
 //set starting point at index 76, which is bottom middle
 let currentIndex = 76;
 //timer at 20 seconds
-let currentTime = 20;
+let currentTime = 5;
 //timer Id w/value
 let timerId = 0;
 
@@ -153,7 +153,7 @@ function lose() {
         result.innerHTML = 'You Looose'
     squares[currentIndex].classList.remove('frog')
 clearInterval(timerId)
-document.removeEventListener('keyup', moveFrog)
+document.removeEventListener('keyup', movefrog)
 }
 }
 
