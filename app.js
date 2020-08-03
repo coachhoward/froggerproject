@@ -3,6 +3,7 @@ const squares = document.querySelectorAll('.grid div');
 const timeLeft = document.querySelector('#time');
 const result = document.querySelector('#result');
 const startButton = document.querySelector('#button');
+const h1Text = document.querySelector('.h1text')
 
 const carsLeft = document.querySelectorAll('.car-left');
 const carsRight = document.querySelectorAll('.car-right');
@@ -140,7 +141,7 @@ function moveLogRight(logRight) {
 //reference index number 4, which is the 5th div.
 function win() {
     if(squares[4].classList.contains('frog')) {
-        result.innerHTML = 'You win'
+        h1Text.innerHTML = `You win! You must be feeling "Froggy"`
         squares[currentIndex].classList.remove('frog')
         clearInterval(timerId)
         document.removeEventListener('keyup', movefrog)
@@ -150,7 +151,7 @@ function win() {
 //note: (c1) is the truck img & (l5), (l4) is the river img
 function lose() {
     if((currentTime === 0) || (squares[currentIndex].classList.contains('c1')) || (squares[currentIndex].classList.contains('l5')) || (squares[currentIndex].classList.contains('l4'))) {
-        result.innerHTML = (`You Looose, you got hit by a ${squares[currentIndex]} `)
+        h1Text.innerHTML = (`You Looose, you have to "Be Careful and Hurry Up"`)
     squares[currentIndex].classList.remove('frog')
 clearInterval(timerId)
 document.removeEventListener('keyup', movefrog)
