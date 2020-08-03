@@ -16,7 +16,7 @@ const width = 9;
 //set starting point at index 76, which is bottom middle
 let currentIndex = 76;
 //timer at 20 seconds
-let currentTime = 8;
+let currentTime = 20;
 //timer Id w/value
 let timerId = 0;
 
@@ -143,14 +143,14 @@ function win() {
         result.innerHTML = 'You win'
         squares[currentIndex].classList.remove('frog')
         clearInterval(timerId)
-        document.removeEventListener('keyup', moveFrog)
+        document.removeEventListener('keyup', movefrog)
     }
 }
 
 //note: (c1) is the truck img & (l5), (l4) is the river img
 function lose() {
     if((currentTime === 0) || (squares[currentIndex].classList.contains('c1')) || (squares[currentIndex].classList.contains('l5')) || (squares[currentIndex].classList.contains('l4'))) {
-        result.innerHTML = 'You Looose'
+        result.innerHTML = (`You Looose, you got hit by a ${squares[currentIndex]} `)
     squares[currentIndex].classList.remove('frog')
 clearInterval(timerId)
 document.removeEventListener('keyup', movefrog)
