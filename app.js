@@ -9,6 +9,7 @@ const timeLeft = document.querySelector('#time');
 const result = document.querySelector('#result');
 //start after refresh
 const startButton = document.querySelector('#button');
+const nextRound = document.querySelector('#next-round')
 //text to show results of game
 const h1Text = document.querySelector('.h1text')
 //cars moving left to tartet in loop
@@ -28,6 +29,33 @@ let currentIndex = 76;
 let currentTime = 20;
 //timer Id w/value
 let timerId = 0;
+
+
+  //Grabbing Elements
+  const $openBtn = $('#openModal'); // grab the HTML element with the ID 'openModal' and save it to a jquery variable
+  const $modal = $('#modal'); // grab the HTML element with the ID 'modal' and save it to a jquery variable
+  const $closeBtn = $('#close'); // grab the HTML element with the ID 'close' and save it to a jquery variable
+  
+  //Event Handlers
+  const openModal = () => {
+    $modal.css('display', 'block'); // add the css property display: block to the HTML element we stored in the $modal variable
+  }
+  
+  const closeModal = () => {
+    $modal.css('display', 'none'); // add the css property display: none to the HTML element we stored in the $modal variable
+  }
+  
+  //Event Listeners
+  $openBtn.on('click', openModal); // on click, trigger the openModal function
+  $closeBtn.on('click', closeModal); // on click, trigger the closeModal function
+  
+  // setTimeout(openModal, 5000); // trigger the openModal function automatically after a few seconds
+
+
+
+
+
+
 //add frog to bottom middle on ind 76 bottom
  squares[currentIndex].classList.add('frog')
 //jquery frog jumping sound
@@ -195,7 +223,7 @@ function moveWithLogRight() {
     }
 }
 //func move pices on game grid invoke
-function movePiece () {
+function movePiece (x) {
     currentTime--
     timeLeft.textContent = currentTime
     autoMoveCars()
@@ -216,6 +244,26 @@ startButton.addEventListener('click', () => {
 
 })
 
+nextRound.addEventListener('click', () => {
+    if(timerId)
+{
+    clearInterval(timerId)
+} else {
+    timerId = setInterval(movePiece, 1000)
+    document.addEventListener('keyup', movefrog)
+    
+}
+
+})
+// function movePiece () {
+//     currentTime--
+//     timeLeft.textContent = currentTime
+//     autoMoveCars()
+//     autoMoveLogs()
+//     moveWithLogLeft()
+//     moveWithLogRight()
+//     lose()
+// }
 
 
 
@@ -225,6 +273,10 @@ $('#button').click(e => sound.play());
 $('.h1text').click(e => sound.play());
 $('.end').click(e => sound.play());
 
+
+// $(function() {
+//     $("#dialog").dialog();
+//   } );
 
 
 

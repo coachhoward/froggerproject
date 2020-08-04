@@ -36,18 +36,26 @@ background-size: 80px 80px;
 }
 
 .car1 {
+  /* firetruck image */
     background-color: black;
     background-image: url('https://previews.123rf.com/images/clairev/clairev1511/clairev151100123/48681116-fire-truck-theme-image-vector-illustration-.jpg');
     background-repeat: no-repeat;
   background-size: 80px 80px;
 }
 .car-right.car1 {
+  /* taxi image */
   background-image: url('https://cdn.imgbin.com/5/21/6/imgbin-taxicabs-of-new-york-city-yellow-cab-taxi-dt12sch5vvS1Huj2uR6ihk9gk.jpg');
+  background-repeat: no-repeat;
+background-size: 80px 80px;
+}
+.car-right.car11 {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQRxEtLcWyZecIGMQYA-1Upde1PAxTEkym1Zg&usqp=CAU');
   background-repeat: no-repeat;
 background-size: 80px 80px;
 }
 
 .car2, .car3 {
+  /* road image */
     background-color: grey;
     background-image: url('https://t2.rbxcdn.com/af0dcf2b210ff4bf9cde107f77b063d0');
     background-repeat: no-repeat;
@@ -82,3 +90,8 @@ color: red;
   background-repeat: no-repeat;
   background-size: 80px 80px;
 }
+
+
+
+
+
