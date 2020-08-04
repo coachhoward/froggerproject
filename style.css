@@ -2,7 +2,7 @@ body {
   /* background-color: lightgrey; */
 }
 .container {
-  /* background-color: lightcoral; */
+  background-color: rgb(225, 248, 234);
 }
 
 .grid {
@@ -37,9 +37,14 @@ background-size: 80px 80px;
 
 .car1 {
     background-color: black;
-    background-image: url('https://previews.123rf.com/images/mechanik/mechanik1612/mechanik161200001/68719846-cartoon-monster-truck-available-eps-10-separated-by-groups-and-layers-with-transparency-effects-for-.jpg');
+    background-image: url('https://previews.123rf.com/images/clairev/clairev1511/clairev151100123/48681116-fire-truck-theme-image-vector-illustration-.jpg');
     background-repeat: no-repeat;
   background-size: 80px 80px;
+}
+.car-right.car1 {
+  background-image: url('https://cdn.imgbin.com/5/21/6/imgbin-taxicabs-of-new-york-city-yellow-cab-taxi-dt12sch5vvS1Huj2uR6ihk9gk.jpg');
+  background-repeat: no-repeat;
+background-size: 80px 80px;
 }
 
 .car2, .car3 {
