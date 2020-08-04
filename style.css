@@ -35,27 +35,27 @@ background-size: 80px 80px;
   background-size: 80px 80px;
 }
 
-.c1 {
+.car1 {
     background-color: black;
     background-image: url('https://previews.123rf.com/images/mechanik/mechanik1612/mechanik161200001/68719846-cartoon-monster-truck-available-eps-10-separated-by-groups-and-layers-with-transparency-effects-for-.jpg');
     background-repeat: no-repeat;
   background-size: 80px 80px;
 }
 
-.c2, .c3 {
+.car2, .car3 {
     background-color: grey;
     background-image: url('https://t2.rbxcdn.com/af0dcf2b210ff4bf9cde107f77b063d0');
     background-repeat: no-repeat;
   background-size: 80px 80px;
 }
-.l1, .l2, .l3 {
+.log1, .log2, .log3 {
     background-color: brown;
     background-image: url('https://banner2.cleanpng.com/20180827/xsi/kisspng-forest-log-tree-firewood-firewood-forest-log-trapped-png-image-picpng-5b8434d2c438c0.4754663615353909308037.jpg');
     background-repeat: no-repeat;
   background-size: 80px 80px;
  
 }
-.l4, .l5 {
+.log4, .log5 {
     background-color: lightblue;
     background-image: url('https://pp.netclipart.com/pp/s/6-64863_river-clipart-transparent-background-cartoon-water-wave-png.png');
 background-repeat: no-repeat;
@@ -70,4 +70,10 @@ background-size: 80px 80px;
 .h1text {
   text-align: center;
 color: red;
+}
+.lilly {
+  background-color: limegreen;
+  background-image: url('https://www.clipartkey.com/mpngs/m/57-574987_transparent-lilies-clipart-transparent-lily-pad-cartoon.png');
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
 }

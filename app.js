@@ -73,34 +73,34 @@ function autoMoveCars() {
 //switch 
 function moveCarLeft(carLeft) {
     switch (true) {
-        case carLeft.classList.contains('c1'):
-            carLeft.classList.remove('c1')
-            carLeft.classList.add('c2')
+        case carLeft.classList.contains('car1'):
+            carLeft.classList.remove('car1')
+            carLeft.classList.add('car2')
             break
-        case carLeft.classList.contains('c2'):
-            carLeft.classList.remove('c2')
-            carLeft.classList.add('c3')
+        case carLeft.classList.contains('car2'):
+            carLeft.classList.remove('car2')
+            carLeft.classList.add('car3')
             break
-        case carLeft.classList.contains('c3'):
-            carLeft.classList.remove('c3')
-            carLeft.classList.add('c1')
+        case carLeft.classList.contains('car3'):
+            carLeft.classList.remove('car3')
+            carLeft.classList.add('car1')
             break
     }
 }
 //switch
 function moveCarRight(carRight) {
     switch (true) {
-        case carRight.classList.contains('c1'):
-            carRight.classList.remove('c1')
-            carRight.classList.add('c3')
+        case carRight.classList.contains('car1'):
+            carRight.classList.remove('car1')
+            carRight.classList.add('car3')
             break
-        case carRight.classList.contains('c2'):
-            carRight.classList.remove('c2')
-            carRight.classList.add('c1')
+        case carRight.classList.contains('car2'):
+            carRight.classList.remove('car2')
+            carRight.classList.add('car1')
             break
-        case carRight.classList.contains('c3'):
-            carRight.classList.remove('c3')
-            carRight.classList.add('c2')
+        case carRight.classList.contains('car3'):
+            carRight.classList.remove('car3')
+            carRight.classList.add('car2')
             break
     }
 }
@@ -112,50 +112,50 @@ function autoMoveLogs() {
 //5 wide, 3 log ,2 water
 function moveLogLeft(logLeft) {
     switch (true) {
-        case logLeft.classList.contains('l1'):
-            logLeft.classList.remove('l1')
-            logLeft.classList.add('l2')
+        case logLeft.classList.contains('log1'):
+            logLeft.classList.remove('log1')
+            logLeft.classList.add('log2')
             break
-        case logLeft.classList.contains('l2'):
-            logLeft.classList.remove('l2')
-            logLeft.classList.add('l3')
+        case logLeft.classList.contains('log2'):
+            logLeft.classList.remove('log2')
+            logLeft.classList.add('log3')
             break
-        case logLeft.classList.contains('l3'):
-            logLeft.classList.remove('l3')
-            logLeft.classList.add('l4')
+        case logLeft.classList.contains('log3'):
+            logLeft.classList.remove('log3')
+            logLeft.classList.add('log4')
             break
-        case logLeft.classList.contains('l4'):
-            logLeft.classList.remove('l4')
-            logLeft.classList.add('l5')
+        case logLeft.classList.contains('log4'):
+            logLeft.classList.remove('log4')
+            logLeft.classList.add('log5')
             break
-        case logLeft.classList.contains('l5'):
-            logLeft.classList.remove('l5')
-            logLeft.classList.add('l1')
+        case logLeft.classList.contains('log5'):
+            logLeft.classList.remove('log5')
+            logLeft.classList.add('log1')
             break
     }
 }
 //switch
 function moveLogRight(logRight) {
     switch (true) {
-        case logRight.classList.contains('l1'):
-            logRight.classList.remove('l1')
-            logRight.classList.add('l5')
+        case logRight.classList.contains('log1'):
+            logRight.classList.remove('log1')
+            logRight.classList.add('log5')
             break
-        case logRight.classList.contains('l2'):
-            logRight.classList.remove('l2')
-            logRight.classList.add('l1')
+        case logRight.classList.contains('log2'):
+            logRight.classList.remove('log2')
+            logRight.classList.add('log1')
             break
-        case logRight.classList.contains('l3'):
-            logRight.classList.remove('l3')
-            logRight.classList.add('l2')
+        case logRight.classList.contains('log3'):
+            logRight.classList.remove('log3')
+            logRight.classList.add('log2')
             break
-        case logRight.classList.contains('l4'):
-            logRight.classList.remove('l4')
-            logRight.classList.add('l3')
+        case logRight.classList.contains('log4'):
+            logRight.classList.remove('log4')
+            logRight.classList.add('log3')
             break
-        case logRight.classList.contains('l5'):
-            logRight.classList.remove('l5')
-            logRight.classList.add('l4')
+        case logRight.classList.contains('log5'):
+            logRight.classList.remove('log5')
+            logRight.classList.add('log4')
             break
     }
 }
@@ -171,7 +171,7 @@ function win() {
 
 //note: (c1) is the truck img & (l5), (l4) is the river img
 function lose() {
-    if((currentTime === 0) || (squares[currentIndex].classList.contains('c1')) || (squares[currentIndex].classList.contains('l5')) || (squares[currentIndex].classList.contains('l4'))) {
+    if((currentTime === 0) || (squares[currentIndex].classList.contains('car1')) || (squares[currentIndex].classList.contains('log5')) || (squares[currentIndex].classList.contains('log4'))) {
         h1Text.innerHTML = (`You Lose, you have to "Be Careful and Hurry Up"`)
     squares[currentIndex].classList.remove('frog')
 clearInterval(timerId)
