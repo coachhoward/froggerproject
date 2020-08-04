@@ -30,6 +30,13 @@ let currentTime = 20;
 let timerId = 0;
 //add frog to bottom middle on ind 76 bottom
  squares[currentIndex].classList.add('frog')
+//jquery frog jumping sound
+//link to relative path sounds
+
+ const frogSound = new Audio ('sounds/frog_jump(3).mp3');
+ $(document).on('keydown',e => frogSound.play());
+
+
 //use arrow keys on keyboard to move frog 37=L,38=up,39=R,40=down
  function movefrog (event){
      squares[currentIndex].classList.remove('frog')
@@ -53,6 +60,10 @@ let timerId = 0;
           lose();
           win();
  }
+
+ //const sound = new Audio("https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav");
+
+  //$('event.keycode').keydown(e => sound.play());
 
 //use foreach to create an illusion that cars and logs are moving. Also add timer to control speed 
 function autoMoveCars() {
@@ -161,7 +172,7 @@ function win() {
 //note: (c1) is the truck img & (l5), (l4) is the river img
 function lose() {
     if((currentTime === 0) || (squares[currentIndex].classList.contains('c1')) || (squares[currentIndex].classList.contains('l5')) || (squares[currentIndex].classList.contains('l4'))) {
-        h1Text.innerHTML = (`You Looose, you have to "Be Careful and Hurry Up"`)
+        h1Text.innerHTML = (`You Lose, you have to "Be Careful and Hurry Up"`)
     squares[currentIndex].classList.remove('frog')
 clearInterval(timerId)
 document.removeEventListener('keyup', movefrog)
@@ -200,8 +211,32 @@ startButton.addEventListener('click', () => {
 } else {
     timerId = setInterval(movePiece, 1000)
     document.addEventListener('keyup', movefrog)
+    
 }
+
 })
+
+
+
+
+const sound = new Audio("https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav");
+$('#next-round').click(e => sound.play());
+$('#button').click(e => sound.play());
+$('.h1text').click(e => sound.play());
+$('.end').click(e => sound.play());
+
+
+
+
+// const $nextRound = $("#next-round").click(function()
+// {
+//     location.reload(true);
+// }
+
+// );
+
+
+
 
 // function movelogRight(logRight) {
 //     switch (true) {

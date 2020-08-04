@@ -1,9 +1,19 @@
+body {
+  /* background-color: lightgrey; */
+}
+.container {
+  /* background-color: lightcoral; */
+}
+
 .grid {
+  
     border: 1px solid;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     height: 720px;
     width: 720px;
+    margin-left: 120px;
 }
 
 .grid div {
@@ -34,7 +44,7 @@ background-size: 80px 80px;
 
 .c2, .c3 {
     background-color: grey;
-    background-image: url('https://lh3.googleusercontent.com/proxy/NsgZGZE7auf7usd6fh4WeVhES5M0OU6TBZaaTU3BfryddvYneYa6P_yShGjrAWatqc0AKSGTY-Gb9Ud3ZHW47ggk');
+    background-image: url('https://t2.rbxcdn.com/af0dcf2b210ff4bf9cde107f77b063d0');
     background-repeat: no-repeat;
   background-size: 80px 80px;
 }
@@ -58,5 +68,6 @@ background-size: 80px 80px;
   background-size: 80px 80px;
 }
 .h1text {
+  text-align: center;
 color: red;
 }
