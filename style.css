@@ -170,7 +170,7 @@ color:  rgb(248, 8, 8)
 }
 #open-modal:hover{
   cursor: pointer;
-  box-shadow: inset 0 0 10px rgb(248, 8, 8);
+  box-shadow: inset 0 0 20px rgb(248, 8, 8);
 }
 .link-cont {
   display: flex;
@@ -180,7 +180,7 @@ color:  rgb(248, 8, 8)
   
 }
 a {
-  padding: 20px;
+  padding: 25px;
   color:  rgb(248, 8, 8);
   border: 2px solid rgb(248, 8, 8);
   border-radius: 4px;
@@ -189,5 +189,5 @@ a {
 }
 a:hover{
   cursor: pointer;
-  box-shadow: inset 0 0 10px rgb(248, 8, 8);
+  box-shadow: inset 0 0 20px rgb(248, 8, 8);
 
