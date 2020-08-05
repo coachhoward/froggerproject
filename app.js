@@ -182,7 +182,7 @@ function win() {
 //note: (car1) is the truck img & (log5), (log4) is the river img
 function lose() {
     if((currentTime === 0) || (squares[currentIndex].classList.contains('car1')) || (squares[currentIndex].classList.contains('log5')) || (squares[currentIndex].classList.contains('log4'))) {
-        h1Text.innerHTML = (`You Lose, you have to "Be Careful and Hurry Up"`)
+        h1Text.innerHTML = (`You Lose, you have to "Be Careful and Hurry Up" hit the refresh button and try again.`)
     squares[currentIndex].classList.remove('frog')
 clearInterval(timerId)
 document.removeEventListener('keyup', movefrog)
