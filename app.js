@@ -31,13 +31,6 @@ let currentTime = 20;
 let timerId;
 
 
-
-
-
-
-
-
-
 //add frog to bottom middle on ind 76 bottom
  squares[currentIndex].classList.add('frog')
 //jquery frog jumping sound
@@ -180,7 +173,7 @@ function win() {
     }
 }
 //define lose func
-//note: (c1) is the truck img & (l5), (l4) is the river img
+//note: (car1) is the truck img & (log5), (log4) is the river img
 function lose() {
     if((currentTime === 0) || (squares[currentIndex].classList.contains('car1')) || (squares[currentIndex].classList.contains('log5')) || (squares[currentIndex].classList.contains('log4'))) {
         h1Text.innerHTML = (`You Lose, you have to "Be Careful and Hurry Up"`)
@@ -206,7 +199,7 @@ function moveWithLogRight() {
     }
 }
 //func move pices on game grid invoke
-function movePiece (x) {
+function movePiece () {
     currentTime--
     timeLeft.textContent = currentTime
     autoMoveCars()
@@ -251,7 +244,7 @@ nextRound.addEventListener('click', () => {
 
 
 
-const sound = new Audio("https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav");
+const sound = new Audio("sounds/game_audio.mp3");
 $('#next-round').click(e => sound.play());
 $('#button').click(e => sound.play());
 $('.h1text').click(e => sound.play());
@@ -260,6 +253,8 @@ $('.end').click(e => sound.play());
 $('#try-agian').click(function(){
 location.reload(true)
 })
+
+
 
 // const $restart = $('#button')
 // $($restart).click(function() {
