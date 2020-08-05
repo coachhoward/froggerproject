@@ -24,11 +24,14 @@
 }
 
 #game-body {
+  display: flex;
   background-color:rgb(22, 21, 21);
 }
 .container {
+  display: flex;
+  justify-content: center;
   border-radius: 1rem;
-  margin: 30px 200px 30px 250px;
+  /* margin: 30px 200px 30px 250px; */
   background-image: linear-gradient(to right, red,orange,yellow,green,yellow,orange,red);
 }
 
@@ -42,7 +45,7 @@
     
     height: 720px;
     width: 720px;
-    margin-left: 220px;
+    /* margin-left: 220px; */
 }
 
 .grid div {
@@ -135,21 +138,29 @@ background-size: 80px 80px;
   background-size: 80px 80px;
 }
 #game-h1 {
+  /* border: solid; */
   font-size: 50px;
   text-align: center;
   color: rgb(248, 8, 8);
   text-shadow:  rgb(248, 8, 8);
 }
 .h1text {
-text-align: center;
+  text-align: center;
+  /* border: solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 color: red;
-font-size: 60px;
-margin-top: 60px;
+/* font-size: 60px; */
+/* margin-top: 60px; */
 }
 #time {
+  
+  /* border: solid; */
   color:rgb(248, 8, 8)
 }
 #result {
+  /* border: solid; */
 color:  rgb(248, 8, 8)
 }
 .lilly {
@@ -191,3 +202,60 @@ a:hover{
   cursor: pointer;
   box-shadow: inset 0 0 20px rgb(248, 8, 8);
 
+}
+.button-cont{
+  padding-right: 4rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+#button{
+  padding: 25px;
+  border-radius: 4px;
+  background-color: rgb(22, 21, 21);
+  color:rgb(248, 8, 8);
+  border: 2px solid rgb(248, 8, 8);
+  font-family: 'Lakki Reddy', cursive;
+  font-size: 20px;
+}
+#button:hover{
+  cursor: pointer;
+  box-shadow: inset 0 0 20px rgb(248, 8, 8);}
+#next-round{
+  padding: 25px;
+  border-radius: 4px;
+  background-color: rgb(22, 21, 21);
+  color:rgb(248, 8, 8);
+  border: 2px solid rgb(248, 8, 8);
+  font-family: 'Lakki Reddy', cursive;
+  font-size: 20px;
+}
+#next-round:hover{
+  cursor: pointer;
+  box-shadow: inset 0 0 20px rgb(248, 8, 8);}
+#try-again{
+  padding: 25px;
+  border-radius: 4px;
+  background-color: rgb(22, 21, 21);
+  color:rgb(248, 8, 8);
+  border: 2px solid rgb(248, 8, 8);
+  font-family: 'Lakki Reddy', cursive;
+  font-size: 20px;
+}
+#try-again:hover{
+  cursor: pointer;
+  box-shadow: inset 0 0 20px rgb(248, 8, 8);}
+#time{
+  padding: 25px;
+  border-radius: 4px;
+  background-color: rgb(22, 21, 21);
+  color:rgb(248, 8, 8);
+  border: 2px solid rgb(248, 8, 8);
+  font-family: 'Lakki Reddy', cursive;
+  font-size: 20px;
+}
+#time-remaining{
+  color: yellowgreen;
+}
