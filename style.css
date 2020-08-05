@@ -3,7 +3,7 @@
 }
 #home-h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   color: red;
   font-family: 'Lakki Reddy', cursive;
 }
@@ -86,9 +86,15 @@ background-size: 80px 80px;
 .car2, .car3 {
   /* road image */
     background-color: grey;
-    background-image: url('https://t2.rbxcdn.com/af0dcf2b210ff4bf9cde107f77b063d0');
+    background-image: url('https://us.123rf.com/450wm/rottenman/rottenman1603/rottenman160300001/56001408-white-stripess-on-asphalt-road-texture-background.jpg?ver=6');
     background-repeat: no-repeat;
   background-size: 80px 80px;
+}
+#kids-playing{
+  background-color: grey;
+  background-image: url('https://cdn3.vectorstock.com/i/1000x1000/51/27/cartoon-happy-children-on-sidewalk-vector-24875127.jpg');
+  background-repeat: no-repeat;
+background-size: 80px 80px;
 }
 .log1, .log2, .log3 {
     background-color: brown;
@@ -98,8 +104,26 @@ background-size: 80px 80px;
  
 }
 .log4, .log5 {
+
     background-color: lightblue;
     background-image: url('https://pp.netclipart.com/pp/s/6-64863_river-clipart-transparent-background-cartoon-water-wave-png.png');
+background-repeat: no-repeat;
+background-size: 80px 80px;
+}
+/* #kid-finish{
+  background-color: grey;
+  background-image: url('https://thumbs.dreamstime.com/b/girl-above-rock-river-illustration-32521796.jpg');
+  background-repeat: no-repeat;
+background-size: 80px 80px; */
+#flowers{
+  background-color: lightblue;
+  background-image: url('https://i.pinimg.com/originals/e0/6c/e4/e06ce4005e46966b24489b0a704bc06e.jpg');
+background-repeat: no-repeat;
+background-size: 80px 80px;
+}
+#grass{
+  background-color: white;
+  background-image: url('https://i.pinimg.com/originals/00/62/56/006256a1483e2164a378bac3e225db95.png');
 background-repeat: no-repeat;
 background-size: 80px 80px;
 }

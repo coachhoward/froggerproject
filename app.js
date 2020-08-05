@@ -10,6 +10,7 @@ const result = document.querySelector('#result');
 //start after refresh
 const startButton = document.querySelector('#button');
 const nextRound = document.querySelector('#next-round')
+const tryAgain = document.querySelector('#try-again')
 //text to show results of game
 const h1Text = document.querySelector('.h1text')
 //cars moving left to tartet in loop
@@ -36,6 +37,7 @@ let timerId;
 //jquery frog jumping sound
 //link to relative path sounds
 
+//add frog jumping audio
  const frogSound = new Audio ('sounds/frog_jump(3).mp3');
  $(document).on('keydown',e => frogSound.play());
 
@@ -44,15 +46,19 @@ let timerId;
  function movefrog (event){
      squares[currentIndex].classList.remove('frog')
      switch(event.keyCode){
+         //37 is left arrow
         case 37:
              if(currentIndex % width !== 0) currentIndex -= 1;
             break
+            //38 is up arrow
         case 38:
             if(currentIndex - width >= 0) currentIndex -= width;
             break
+            //39 is right arrow
         case 39:
             if(currentIndex % width < width -1) currentIndex += 1;
             break
+            //40 is down arrow
         case 40:
             if(currentIndex + width < width * width) currentIndex += width;
             break
@@ -166,7 +172,7 @@ function moveLogRight(logRight) {
 //reference index number 4, which is the 5th div.
 function win() {
     if(squares[4].classList.contains('frog')) {
-        h1Text.innerHTML = `You win! You must be feeling "Froggy"`
+        h1Text.innerHTML = `You win! You must be feeling "Froggy" `
         squares[currentIndex].classList.remove('frog')
         clearInterval(timerId)
         document.removeEventListener('keyup', movefrog)
@@ -221,6 +227,17 @@ startButton.addEventListener('click', () => {
 })
 
 nextRound.addEventListener('click', () => {
+    if(timerId)
+{
+    clearInterval(timerId)
+} else {
+    timerId = setInterval(movePiece, 1000)
+    document.addEventListener('keyup', movefrog)
+    
+}
+
+})
+tryAgain.addEventListener('click', () => {
     if(timerId)
 {
     clearInterval(timerId)
