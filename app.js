@@ -248,9 +248,11 @@ const sound = new Audio("sounds/game_audio.mp3");
 $('#next-round').click(e => sound.play());
 $('#button').click(e => sound.play());
 $('.h1text').click(e => sound.play());
-$('.end').click(e => sound.play());
+$('#try-again').click(e => sound.play());
+
 
 $('#try-agian').click(function(){
+    console.log('test')
 location.reload(true)
 })
 
