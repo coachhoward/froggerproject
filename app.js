@@ -4,7 +4,7 @@
 //target all divs in game graph
 const squares = document.querySelectorAll('.grid div');
 //time left in game
-const timeLeft = document.querySelector('#time');
+const timeLeft = document.querySelector('#time-remaining');
 //results of game
 const result = document.querySelector('#result');
 //start after refresh
@@ -28,7 +28,7 @@ let currentIndex = 76;
 //timer at 20 seconds
 let currentTime = 20;
 //timer Id w/value
-let timerId = 0;
+let timerId;
 
 
 
@@ -75,7 +75,8 @@ let timerId = 0;
 
   //$('event.keycode').keydown(e => sound.play());
 
-//use foreach to create an illusion that cars and logs are moving. Also add timer to control speed 
+//use foreach to create an illusion that cars and logs are moving. ////Also add timer to control speed 
+//target class names .car-left and .car-right
 function autoMoveCars() {
     carsLeft.forEach(carLeft => moveCarLeft(carLeft));
     carsRight.forEach(carRight => moveCarRight(carRight));
@@ -178,7 +179,7 @@ function win() {
         document.removeEventListener('keyup', movefrog)
     }
 }
-
+//define lose func
 //note: (c1) is the truck img & (l5), (l4) is the river img
 function lose() {
     if((currentTime === 0) || (squares[currentIndex].classList.contains('car1')) || (squares[currentIndex].classList.contains('log5')) || (squares[currentIndex].classList.contains('log4'))) {
@@ -191,7 +192,7 @@ document.removeEventListener('keyup', movefrog)
 //move frog on log
 function moveWithLogLeft() {
     if (currentIndex >= 27 && currentIndex < 35){
-       squares[currentIndex].classList.add('frog')
+       squares[currentIndex].classList.remove('frog')
        currentIndex += 1
        squares[currentIndex].classList.add('frog') 
     }
@@ -199,7 +200,7 @@ function moveWithLogLeft() {
 //move frog on log
 function moveWithLogRight() {
     if (currentIndex > 18 && currentIndex <= 26){
-       squares[currentIndex].classList.add('frog')
+       squares[currentIndex].classList.remove('frog')
        currentIndex -= 1
        squares[currentIndex].classList.add('frog') 
     }
@@ -255,6 +256,10 @@ $('#next-round').click(e => sound.play());
 $('#button').click(e => sound.play());
 $('.h1text').click(e => sound.play());
 $('.end').click(e => sound.play());
+
+$('#try-agian').click(function(){
+location.reload(true)
+})
 
 // const $restart = $('#button')
 // $($restart).click(function() {
