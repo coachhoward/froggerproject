@@ -280,8 +280,7 @@ tryAgain.addEventListener('click', () => {
 
 
 $('#try-agian').click(function(){
-    console.log('test')
-location.reload(true)
+  alert('test')
 })
 
 
