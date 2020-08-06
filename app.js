@@ -41,6 +41,17 @@ let timerId;
  const frogSound = new Audio ('sounds/frog_jump(3).mp3');
  $(document).on('keydown',e => frogSound.play());
 
+ const frogDied = new Audio ('sounds/hit_by_car (16).mp3');
+ $(document).on('keydown',e => frogSound.play());
+
+ const frogWins = new Audio ('sounds/frogWin.mp3');
+
+ const sound = new Audio("sounds/game_audio.mp3");
+$('#next-round').click(e => sound.play());
+$('#button').click(e => sound.play());
+$('.h1text').click(e => sound.play());
+$('#try-again').click(e => sound.play());
+
 
 //use arrow keys on keyboard to move frog 37=L,38=up,39=R,40=down
  function movefrog (event){
@@ -173,6 +184,7 @@ function moveLogRight(logRight) {
 function win() {
     if(squares[4].classList.contains('frog')) {
         h1Text.innerHTML = `You win! You must be feeling "Froggy" `
+        frogWins.play()
         squares[currentIndex].classList.remove('frog')
         clearInterval(timerId)
         document.removeEventListener('keyup', movefrog)
@@ -183,6 +195,7 @@ function win() {
 function lose() {
     if((currentTime === 0) || (squares[currentIndex].classList.contains('car1')) || (squares[currentIndex].classList.contains('log5')) || (squares[currentIndex].classList.contains('log4'))) {
         h1Text.innerHTML = (`You Lose, you have to "Be Careful and Hurry Up" hit the refresh button and try again.`)
+        frogDied.play()
     squares[currentIndex].classList.remove('frog')
 clearInterval(timerId)
 document.removeEventListener('keyup', movefrog)
@@ -261,17 +274,32 @@ tryAgain.addEventListener('click', () => {
 
 
 
-const sound = new Audio("sounds/game_audio.mp3");
-$('#next-round').click(e => sound.play());
-$('#button').click(e => sound.play());
-$('.h1text').click(e => sound.play());
-$('#try-again').click(e => sound.play());
+
+// $('.car1').on(e => sound.play();
+
 
 
 $('#try-agian').click(function(){
     console.log('test')
 location.reload(true)
 })
+
+
+
+
+// const $openBtn = $('#openModal');
+// const $modal = $('#modal');
+// const $closeBtn = $('#close');
+// //Event Handlers
+// const openModal = (event) => {
+//   $modal.css('display', 'block');
+// }
+// const closeModal = (event) => {
+//   $modal.css('display', 'none');
+// }
+// //Event Listeners
+// $openBtn.on('click', openModal);
+// $closeBtn.on('click', closeModal);
 
 
 
