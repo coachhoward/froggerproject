@@ -39,18 +39,19 @@ let timerId;
 
 //add frog jumping audio
  const frogSound = new Audio ('sounds/frog_jump(3).mp3');
- $(document).on('keydown',e => frogSound.play());
-
+ $(document).on('keydown',event => frogSound.play());
+//frog died audio
  const frogDied = new Audio ('sounds/hit_by_car (16).mp3');
+ //start playing sound
  $(document).on('keydown',e => frogSound.play());
-
+//frog wins sound
  const frogWins = new Audio ('sounds/frogWin.mp3');
-
+//attach sound to events
  const sound = new Audio("sounds/game_audio.mp3");
-$('#next-round').click(e => sound.play());
-$('#button').click(e => sound.play());
-$('.h1text').click(e => sound.play());
-$('#try-again').click(e => sound.play());
+$('#next-round').click(event => sound.play());
+$('#button').click(event => sound.play());
+$('.h1text').click(event => sound.play());
+$('#try-again').click(event => sound.play());
 
 
 //use arrow keys on keyboard to move frog 37=L,38=up,39=R,40=down
@@ -81,9 +82,6 @@ $('#try-again').click(e => sound.play());
           win();
  }
 
- //const sound = new Audio("https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav");
-
-  //$('event.keycode').keydown(e => sound.play());
 
 //use foreach to create an illusion that cars and logs are moving. ////Also add timer to control speed 
 //target class names .car-left and .car-right
@@ -181,9 +179,10 @@ function moveLogRight(logRight) {
     }
 }
 //reference index number 4, which is the 5th div.
+//add sounds to func
 function win() {
     if(squares[4].classList.contains('frog')) {
-        h1Text.innerHTML = `You win! You must be feeling "Froggy" `
+        h1Text.innerHTML = `You win 😎! You must be feeling "Froggy" today. Please hit the refresh button and try again.`
         frogWins.play()
         squares[currentIndex].classList.remove('frog')
         clearInterval(timerId)
@@ -192,9 +191,10 @@ function win() {
 }
 //define lose func
 //note: (car1) is the truck img & (log5), (log4) is the river img
+//add sounds to func
 function lose() {
     if((currentTime === 0) || (squares[currentIndex].classList.contains('car1')) || (squares[currentIndex].classList.contains('log5')) || (squares[currentIndex].classList.contains('log4'))) {
-        h1Text.innerHTML = (`You Lose, you have to "Be Careful and Hurry Up" hit the refresh button and try again.`)
+        h1Text.innerHTML = (`You Lose 😥, you have to "Be Careful and Hurry Up" hit the refresh button and try again.`)
         frogDied.play()
     squares[currentIndex].classList.remove('frog')
 clearInterval(timerId)
@@ -227,6 +227,7 @@ function movePiece () {
     moveWithLogRight()
     lose()
 }
+//button
 startButton.addEventListener('click', () => {
     if(timerId)
 {
@@ -238,7 +239,7 @@ startButton.addEventListener('click', () => {
 }
 
 })
-
+//button
 nextRound.addEventListener('click', () => {
     if(timerId)
 {
@@ -250,6 +251,7 @@ nextRound.addEventListener('click', () => {
 }
 
 })
+//button
 tryAgain.addEventListener('click', () => {
     if(timerId)
 {
@@ -261,6 +263,11 @@ tryAgain.addEventListener('click', () => {
 }
 
 })
+
+
+/////////////////////
+////code test graveyard!
+/////////////////////
 
 // function movePiece () {
 //     currentTime--
