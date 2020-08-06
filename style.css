@@ -7,6 +7,23 @@
   color: red;
   font-family: 'Lakki Reddy', cursive;
 }
+#header{
+  border: solid;
+  display: flex;
+  flex-direction: row;
+}
+.h1text {
+  width: 55px;
+  /* border: solid; */
+  display: flex;
+  justify-content: flex-start;
+  justify-content: center;
+  /* flex-direction: row; */
+  /* justify-content: flex-start; */
+color: red;
+/* font-size: 60px; */
+/* margin-top: 60px; */
+}
 #img-cont  {
   text-align: center;
 }
@@ -19,7 +36,7 @@
             -webkit-transform: rotate(0deg);
     }
     to {
-            -webkit-transform: rotate(360deg);
+            -webkit-transform: rotate(0deg);
     }
 }
 
@@ -31,8 +48,10 @@
   display: flex;
   justify-content: center;
   border-radius: 1rem;
+  background-color: rgb(7F, C3, 9A);
+  margin-top: 3rem;
   /* margin: 30px 200px 30px 250px; */
-  background-image: linear-gradient(to right, red,orange,yellow,green,yellow,orange,red);
+  /* background-image: linear-gradient(to right, red,orange,yellow,green,yellow,orange,red); */
 }
 
 .grid {
@@ -100,17 +119,18 @@ background-size: 80px 80px;
   background-repeat: no-repeat;
 background-size: 80px 80px;
 }
+/* log images */
 .log1, .log2, .log3 {
-    background-color: brown;
-    background-image: url('https://banner2.cleanpng.com/20180827/xsi/kisspng-forest-log-tree-firewood-firewood-forest-log-trapped-png-image-picpng-5b8434d2c438c0.4754663615353909308037.jpg');
+    background-color: lightblue;
+    background-image: url('images/logone.png');
     background-repeat: no-repeat;
   background-size: 80px 80px;
  
 }
 .log4, .log5 {
 
-    background-color: blue;
-    background-image: url('https://pp.netclipart.com/pp/s/6-64863_river-clipart-transparent-background-cartoon-water-wave-png.png');
+    background-color: lightblue;
+    background-image: url('images/waves.png');
 background-repeat: no-repeat;
 background-size: 80px 80px;
 }
@@ -137,23 +157,15 @@ background-size: 80px 80px;
     background-repeat: no-repeat;
   background-size: 80px 80px;
 }
-#game-h1 {
-  /* border: solid; */
+/* #game-h1 {
+  border: solid;
   font-size: 50px;
   text-align: center;
   color: rgb(248, 8, 8);
   text-shadow:  rgb(248, 8, 8);
-}
-.h1text {
-  text-align: center;
-  /* border: solid; */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-color: red;
-/* font-size: 60px; */
-/* margin-top: 60px; */
-}
+} */
+
+
 #time {
   
   /* border: solid; */
@@ -207,7 +219,7 @@ a:hover{
   padding-right: 4rem;
   margin-right: 1rem;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
 }
