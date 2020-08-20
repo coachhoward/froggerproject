@@ -1,5 +1,4 @@
-//this file is a rebuild of project 1 file. I could not figure out how to link properly 
-//with 3 diff html pages. Ask in chat if I cant debug. Put both files in github
+
 
 //target all divs in game graph
 const squares = document.querySelectorAll('.grid div');
@@ -286,7 +285,7 @@ tryAgain.addEventListener('click', () => {
 
 
 
-$('#try-agian').click(function(){
+$('#try-again').click(function(){
   alert('test')
 })
 
